@@ -10,22 +10,366 @@
 }
 
 .header {
+  display: flex;
+  align-items: center;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
   /* выше установили ограничения для секции */
+}
+
+.header__logo_place_header {
+  position: absolute;
+  left: 64px;
+  top: 30px;
+  height: 32px;
+  width: 183px;
+  background-image: url(../images/logo_place_header.svg);
+}
+
+.header__title {
+  width: 730px;
+  margin-left: 64px;
+  font-size: 102px;
+  font-weight: 700;
+  line-height: 96px;
+}
+
+.header__subtitle {
+  position: absolute;
+  width: 388px;
+  bottom: 30px;
+  left: 64px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  z-index: 3;
+}
+
+.header__link {
+  color:  #2f80ed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: none;
+}
+
+.header__main-illustration {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 765px;
+  height: 608px;
+  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
+  position: absolute;
+  right: 0;
+  top: 64px;
+  background-color:  #2f80ed;
+  z-index: -1;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
+.description {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  top: 100px;
+  bottom: 100px;
+}
+
+.two-columns__brief {
+  width: 175px;
+  color: #2f80ed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.two-columns__paragraph:nth-of-type(even) {
+  margin: 30px 0;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.digits {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.section-title {
+  width: 60%;
+  top: 100px;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+  margin: auto;
+  text-align: center;
+}
+
+.section-subtitle {
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 1100px;
+  margin: auto;
+}
+
+.table__cell {
+  margin-top: 60px;
+  width: 250px;
+}
+
+.table__heading {
+  width: 250px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.table__text:nth-of-type(odd) {
+  margin: 20px 0 0 0;
+}
+
+.feinman {
+  position: relative;
+  background-image: url(../images/feynman.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  height: 790px;
+}
+
+.feinman__title {
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+  width: 648px;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.feinman__subtitle {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+  margin: auto;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.feinman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+  color: #2f80ed;
+  text-decoration: none;
+
+}
+
+.kaufman {
+  position: relative;
+  background-color: black;
+  z-index: -20;
+  overflow: hidden;
+}
+
+.section-title_theme_dark {
+  width: 60%;
+  top: 90px;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+  margin: auto;
+  margin-top: 90px;
+  text-align: center;
   color: white;
-  margin-right: 0;
+}
+
+.section-subtitle_theme_dark {
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.table_theme_dark {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 1100px;
+  color: white;
+  z-index: 10;
+  margin: auto;
+  margin-bottom: 90px;
+}
+
+.table__cell_theme_dark {
   margin-top: 80px;
+  width: 200px;
+  margin-right: 0;
+  color: white;
+}
+
+.table__heading_theme_dark {
+  width: 250px;
+  padding-bottom: 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.table__text_theme_dark {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.kaufman__triangle {
+  height: 877px;
+  width: 877px;
+  position: absolute;
+  z-index: -10;
+  right: -210px;
+  top: 0;
+}
+
+.footer {
+  padding-top: 60px;
+  position: relative;
+  background-color: black;
+  min-height: 350px;
+}
+
+.footer__columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  flex-basis: 711px;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 250px;
+}
+
+.footer__content_copyright {
+  margin:0;
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.logo_place_footer {
+  align-self: flex-start;
+  height: 35px;
+  width: 183px;
+}
+
+.footer__author {
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+
+.footer__column_content_info {
+  width: 10%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer__column-heading {
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer__column-links {
+  margin: 0 0 16px 0;
+  padding: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer__column_content_social {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+}
+
+.footer__social-icon {
+  margin: 0 10px 0 0;
+  padding: 0;
+  width: 16px;
+  height: 10px;
 }
