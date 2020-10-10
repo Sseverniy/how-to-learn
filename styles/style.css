@@ -243,6 +243,7 @@
   margin-top: 90px;
   text-align: center;
   color: white;
+  z-index: 100;
 }
 
 .section-subtitle_theme_dark {
@@ -254,6 +255,7 @@
   margin-top: 20px;
   text-align: center;
   color: white;
+  z-index: 100;
 }
 
 .table_theme_dark {
