@@ -1,0 +1,9 @@
+.video {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -50px;
+  z-index: 2;
+  position: relative;
+}
